@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #242424;
+    color: white;
+    font-family: 'Poppins';
+    font-weight: 400;
+    min-height: 100vh;
+    
+}
+
+//header alanı 
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    margin-bottom: 50px;
+    div{
+        display: flex;
+        gap: 20px;
+        a{
+            color: rgb(179, 9, 179);
+            text-decoration: none;
+            font-size: 20px;
+            &:hover{
+                scale: 1.03;
+                text-shadow: 4px 4px 10px rgba(255, 255, 255, 0.633);
+            }
+        }
+        .active{
+            text-shadow: 4px 4px 10px rgba(255, 255, 255, 0.633);
+            }
+        }
+    }
+
+
+//listeleme sayfası
+
+.job-count{
+    margin-left: 50px;
+  
+
+
+}
+.list-section{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
+    gap:50px;
+    padding:50px;
+}
+
+
+.job-card{
+    background: gray;
+    border-radius: 10px;
+    padding: 20px;
+    
+}
+.head {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.letter{
+    height: 60px;
+    width: 60px;
+    background-color: purple;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    font-size: 30px;
+}
+
+.info{
+    font-size: 20px;
+
+}
+
+.body{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 30px;
+    .field{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        img{
+            width: 30px;
+        }
+    }
+
+    .status{
+        span{
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+        .Devam{
+
+            background: rgb(189, 189, 6);
+        }
+        .Reddedildi{
+            background: red ;
+
+        }
+        .Mülakat{
+            background: green;
+
+        }
+    }
+}
+
+// Ekleme Sayfası
+.add-sec{
+    box-shadow: 0px 22px 70px 4px rgba(145, 3, 145, 0.715);
+    max-width: 700px;
+    margin: 175px auto;
+    padding: 25px;
+}
+
+.filter-sec{
+    //ekleme stillerini miras alma
+    @extend .add-sec;
+    margin: 100px auto;
+    
+}
+
+form{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    justify-content: space-between;
+    gap: 20px;
+
+    .field{
+        display: flex;
+        flex-direction: column;
+}
+
+.field input,
+.field select {
+    padding: 5px 10px;
+    margin-top: 5px;
+    border-radius: 4px;
+}
+    button{
+        width:140px ;
+        height: 40px;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        background: black;
+        border: none;
+        color: white;
+        transition: all 300ms;
+        &:hover{
+            box-shadow: 0 0 10px rgba(127, 1, 127, 0.551) ;
+        }
+
+    }
+}
